@@ -91,6 +91,7 @@ Duration : 52ms
 
 ===================================
 
+```
 C:\> auditmate.exe
 
 AuditMate
