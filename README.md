@@ -6,7 +6,7 @@ Offline System Auditing Tool
 
 ---
 
-## ⚡ Overview
+## Overview
 
 AuditMate is a portable, offline system auditing tool that records deterministic snapshots of a machine’s state.
 
@@ -24,7 +24,7 @@ It does NOT:
 
 ---
 
-## 🧠 Core Features
+## Features
 
 - Fully offline execution
 - Open-source free version
@@ -35,7 +35,7 @@ It does NOT:
 
 ---
 
-## 📦 Download
+## Download
 
 - Windows: `auditmate.exe`
 - Linux: `auditmate`
@@ -44,7 +44,7 @@ No installer required. Fully portable.
 
 ---
 
-## 🔐 Privacy
+## Privacy
 
 - No telemetry
 - No network communication
@@ -54,56 +54,99 @@ No installer required. Fully portable.
 
 ---
 
-## 💰 Pricing
+## Pricing
 
-### Free
-- System information (OS, hostname, uptime)
+Free:
+- System info (OS, hostname, uptime)
 - Users & services
 - Installed packages
 - Open ports
 - Drift detection
 - Open source
 
-### Pro
+Pro:
 - $25 / month
 - $250 / year
-
-Includes:
 - Historical tracking
 - Export reports (JSON / CSV / HTML)
-- Audit-ready reporting formats
+- Audit-ready reports
 - Multi-system comparison
 - Signed outputs
 
-### Founding Member
+Founding Member:
 - $200 / year (first 100 users, normally $250/year)
 
 ---
 
-## 🖥 Example Output (Windows)
+## Example Output (Windows)
+
+Clean System:
+
+C:> auditmate.exe
+
+AuditMate
+
+Hostname : WORKSTATION-01
+OS : Windows 11 Pro
+Uptime : 1 day, 2 hours
+
+Users : 3
+Services : 128
+Packages : 94
+Ports : 6
+
+Status : Clean
+
+Warnings : 0
+Errors : false
+Reset : false
+Report : auditmate-output\audit.json
+Duration : 52ms
+
+
+Drift Detected (Diff):
+
+C:> auditmate.exe
+
+AuditMate
+
+Hostname : WORKSTATION-01
+OS : Windows 11 Pro
+Uptime : 1 day, 3 hours
+
+Users : 4
+Services : 130
+Packages : 96
+Ports : 8
+
+Status : Drift detected
+
+Changes:
+
+Users:
+hacker (admin)
+Services:
+sshd
+remote-control
+Open ports:
+22/tcp
+3389/tcp
+
+Warnings : 1
+Errors : false
+Reset : false
+Report : auditmate-output\audit.json
+Duration : 61ms
+
 
 ---
 
-### Clean System
+## Philosophy
 
-```text
-C:\> auditmate.exe
+AuditMate records facts.
 
-AuditMate
------------------------------------
-Hostname : WORKSTATION-01
-OS       : Windows 11 Pro
-Uptime   : 1 day, 2 hours
+It does not interpret systems.
+It does not assign risk.
+It does not decide what matters.
 
-Users    : 3
-Services : 128
-Packages : 94
-Ports    : 6
-
-Status   : Clean
------------------------------------
-Warnings : 0
-Errors   : false
-Reset    : false
-Report   : auditmate-output\audit.json
-Duration : 52ms
+It produces deterministic system evidence.
