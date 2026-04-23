@@ -92,7 +92,7 @@ Duration : 52ms
 ===================================
 
 ```
-drift detected
+**drift detected**
 ```
 C:\> auditmate.exe
 
