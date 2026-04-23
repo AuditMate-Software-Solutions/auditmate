@@ -82,6 +82,8 @@ Includes:
 
 ## 🖥 Example Output (Windows)
 
+---
+
 ### Clean System
 
 ```text
