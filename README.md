@@ -90,7 +90,6 @@ Report   : auditmate-output\audit.json
 Duration : 52ms
 
 ============================================
-
 ```
 
 ```text
@@ -141,6 +140,15 @@ Duration : 61ms
 - No cloud dependency  
 - Deterministic output  
 - Verifiable builds  
+
+---
+
+# Contact / Licensing
+
+For Pro licensing, enterprise use, or audit bundle access:
+
+Email: audit-mate@proton.me  
+Website: https://auditmate-software-solutions.github.io/
 
 ---
 
