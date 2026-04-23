@@ -1,152 +1,168 @@
-# AuditMate
+# AuditMate — Portable System Audit Evidence Tool
 
-Offline System Auditing Tool
+AuditMate is a portable, offline system audit tool that produces **deterministic, verifiable snapshots of system state**.
 
-> Capture system state. Detect drift. No cloud. No telemetry. No installation.
+AuditMate records **factual system evidence**. It does not judge, score, or interpret results.
 
----
-
-## Overview
-
-AuditMate is a portable, offline system auditing tool that records deterministic snapshots of a machine’s state.
-
-It is designed for:
-- system change tracking
-- forensic support
-- infrastructure drift detection
-- local evidence collection
-
-It does NOT:
-- send data anywhere
-- run in the background
-- perform scanning or exploitation
-- require installation
+It is used for:
+- audits
+- incident response
+- change tracking
+- system verification
+- forensics
 
 ---
 
-## Features
+# Why AuditMate
 
-- Fully offline execution
-- Open-source free version
-- Windows & Linux binaries
-- Real-time drift detection
 - Deterministic system snapshots
+- Exact change tracking (diffs)
+- Offline-first (no network required)
+- Lightweight CLI tool
 - Human-readable + JSON output
+- Fully transparent free version
 
 ---
 
-## Download
+# Product Tiers
 
-- Windows: `auditmate.exe`
-- Linux: `auditmate`
+## Free Tier — $0
 
-No installer required. Fully portable.
-
----
-
-## Privacy
-
-- No telemetry
-- No network communication
-- No cloud dependency
-- No background services
-- All processing happens locally
-
----
-
-## Pricing
-
-Free:
-- System info (OS, hostname, uptime)
-- Users & services
+- System information (hostname, OS, kernel, uptime)
+- User accounts and admin membership
+- Running services
 - Installed packages
 - Open ports
-- Drift detection
+- Firewall state
+- Baseline snapshot creation
+- Deterministic diff engine
+- Fully offline operation
 - Open source
 
-Pro:
-- $25 / month
-- $250 / year
-- Historical tracking
-- Export reports (JSON / CSV / HTML)
-- Audit-ready reports
+---
+
+## Professional Tier — $25 / month or $250 / year
+
+- Evidence signing
+- Evidence manifest generation
+- Exportable audit bundles
+- Historical snapshot tracking
 - Multi-system comparison
-- Signed outputs
+- Offline verification
+- License-based deployment
 
 Founding Member:
 - $200 / year (first 100 users, normally $250/year)
 
 ---
 
-## Example Output (Windows)
+# How It Works
 
-Clean System:
-
-C:> auditmate.exe
-
-AuditMate
-
-Hostname : WORKSTATION-01
-OS : Windows 11 Pro
-Uptime : 1 day, 2 hours
-
-Users : 3
-Services : 128
-Packages : 94
-Ports : 6
-
-Status : Clean
-
-Warnings : 0
-Errors : false
-Reset : false
-Report : auditmate-output\audit.json
-Duration : 52ms
-
-
-Drift Detected (Diff):
-
-C:> auditmate.exe
-
-AuditMate
-
-Hostname : WORKSTATION-01
-OS : Windows 11 Pro
-Uptime : 1 day, 3 hours
-
-Users : 4
-Services : 130
-Packages : 96
-Ports : 8
-
-Status : Drift detected
-
-Changes:
-
-Users:
-hacker (admin)
-Services:
-sshd
-remote-control
-Open ports:
-22/tcp
-3389/tcp
-
-Warnings : 1
-Errors : false
-Reset : false
-Report : auditmate-output\audit.json
-Duration : 61ms
-
+1. Collect system state
+2. Create baseline snapshot
+3. Compare snapshots (diff engine)
+4. Generate report
+5. (Pro) Sign and export evidence bundle
 
 ---
 
-## Philosophy
+# Example Output (Windows)
+
+```text
+C:\> auditmate-pro.exe
+
+============== AuditMate Report ==============
+--------------------------------------------------
+SYSTEM INFORMATION
+--------------------------------------------------
+Hostname          : MY-LAPTOP
+Host ID           : b577b2d675174a94b735d3b2e3e47683
+Baseline Created  : 2026-04-09T01:25:04Z
+Current Snapshot  : 2026-04-09T03:55:42Z
+OS                : Windows 11 Pro
+Kernel            : 10.0.22631
+Uptime            : 1 day, 3 hours, 12 minutes
+
+USER ACCOUNTS
+--------------------------------------------------
+Administrators:
+  - Administrator
+  - hacker
+  - john
+
+Regular Users:
+  - JOHN
+  - Guest
+
+SYSTEM SUMMARY
+--------------------------------------------------
+Services Running   : 130
+Installed Programs : 95
+Open Ports         : 8
+Firewall State     : enabled
+
+BASELINE COMPARISON
+--------------------------------------------------
+Changes detected:
+
+  Administrators:
+  + hacker (NEW ADMINISTRATOR)
+
+  Services:
+  + sshd (NEW SERVICE)
+  + backdoor-svc (NEW SERVICE)
+
+  Open Ports:
+  + 22/tcp (SSH enabled)
+  + 3389/tcp (RDP enabled)
+
+================================================
+
+JSON report saved to: auditmate-output\audit_report.json
+
+---
+
+# Pricing
+
+Free:
+$0 — fully offline open-source version
+
+Professional:
+$25 / month
+$250 / year
+
+Includes:
+- historical tracking
+- export reports (JSON / CSV / HTML)
+- audit-ready bundles
+- multi-system comparison
+- signed outputs
+
+Founding Member:
+$200 / year (first 100 users, normally $250/year)
+
+---
+
+# Trust & Verification
+
+- No telemetry
+- No network communication
+- No background services
+- No cloud dependency
+- Deterministic output
+- Verifiable builds
+
+Free version is fully open source.
+
+---
+
+# Philosophy
+
+AuditMate does not:
+- score systems
+- assign risk
+- detect vulnerabilities
 
 AuditMate records facts.
 
-It does not interpret systems.
-It does not assign risk.
-It does not decide what matters.
-
-It produces deterministic system evidence.
+You decide what matters.
