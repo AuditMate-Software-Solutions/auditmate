@@ -4,7 +4,12 @@ AuditMate is a portable, offline system audit tool that produces deterministic, 
 
 AuditMate records factual system evidence. It does not judge, score, or interpret results.
 
-It is used for audits, incident response, change tracking, system verification, and forensics.
+It is used for:
+- audits
+- incident response
+- change tracking
+- system verification
+- forensics
 
 ---
 
@@ -63,6 +68,7 @@ Founding Member:
 
 # Example Output (Windows)
 
+```text
 C:\> auditmate.exe
 
 AuditMate
@@ -84,7 +90,6 @@ Reset    : false
 Report   : auditmate-output\audit.json
 Duration : 52ms
 
----
 
 C:\> auditmate.exe
 
@@ -119,48 +124,3 @@ Errors   : false
 Reset    : false
 Report   : auditmate-output\audit.json
 Duration : 61ms
-
----
-
-# Pricing
-
-Free:
-$0 — fully offline open-source version
-
-Professional:
-$25 / month
-$250 / year
-- historical tracking
-- export reports (JSON / CSV / HTML)
-- audit-ready bundles
-- multi-system comparison
-- signed outputs
-
-Founding Member:
-$200 / year (first 100 users, normally $250/year)
-
----
-
-# Trust & Verification
-
-- No telemetry  
-- No network communication  
-- No background services  
-- No cloud dependency  
-- Deterministic output  
-- Verifiable builds  
-
-Free version is fully open source.
-
----
-
-# Philosophy
-
-AuditMate does not:
-- score systems
-- assign risk
-- detect vulnerabilities
-
-AuditMate records facts.
-
-You decide what matters.
