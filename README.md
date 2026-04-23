@@ -92,6 +92,7 @@ Duration : 52ms
 ===================================
 
 ```
+```
 C:\> auditmate.exe
 
 AuditMate
@@ -125,3 +126,4 @@ Errors   : false
 Reset    : false
 Report   : auditmate-output\audit.json
 Duration : 61ms
+```
