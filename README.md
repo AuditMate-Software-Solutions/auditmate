@@ -71,7 +71,7 @@ Founding Member:
 C:\> auditmate.exe
 
 AuditMate
------------------------------------
+────────────────────────────────────────────
 Hostname : WORKSTATION-01
 OS       : Windows 11 Pro
 Uptime   : 1 day, 2 hours
@@ -81,23 +81,25 @@ Services : 128
 Packages : 94
 Ports    : 6
 
-Status   : Clean
------------------------------------
+Status   : CLEAN
+────────────────────────────────────────────
 Warnings : 0
 Errors   : false
 Reset    : false
 Report   : auditmate-output\audit.json
 Duration : 52ms
 
-===================================
+============================================
 
 ```
-**drift detected**
-```
+
+```text
+=== DRIFT DETECTED ===
+
 C:\> auditmate.exe
 
 AuditMate
------------------------------------
+────────────────────────────────────────────
 Hostname : WORKSTATION-01
 OS       : Windows 11 Pro
 Uptime   : 1 day, 3 hours
@@ -107,7 +109,7 @@ Services : 130
 Packages : 96
 Ports    : 8
 
-Status   : Drift detected
+Status   : DRIFT DETECTED
 
 Changes:
  + Users:
@@ -121,10 +123,34 @@ Changes:
    + 22/tcp
    + 3389/tcp
 
------------------------------------
+────────────────────────────────────────────
 Warnings : 1
 Errors   : false
 Reset    : false
 Report   : auditmate-output\audit.json
 Duration : 61ms
 ```
+
+---
+
+# Trust & Verification
+
+- No telemetry  
+- No network communication  
+- No background services  
+- No cloud dependency  
+- Deterministic output  
+- Verifiable builds  
+
+---
+
+# Philosophy
+
+AuditMate does not:
+- score systems
+- assign risk
+- detect vulnerabilities
+
+AuditMate records facts.
+
+You decide what matters.
