@@ -4,13 +4,6 @@ AuditMate is a portable, offline system audit tool that produces deterministic, 
 
 AuditMate records factual system evidence. It does not judge, score, or interpret results.
 
-It is used for:
-- audits
-- incident response
-- change tracking
-- system verification
-- forensics
-
 ---
 
 # Why AuditMate
@@ -28,15 +21,15 @@ It is used for:
 
 ## Free Tier — $0
 
-- System information (hostname, OS, kernel, uptime)  
-- User accounts and admin membership  
+- System info (hostname, OS, kernel, uptime)  
+- Users & admin membership  
 - Running services  
 - Installed packages  
 - Open ports  
 - Firewall state  
-- Baseline snapshot creation  
-- Deterministic diff engine  
-- Fully offline operation  
+- Baseline snapshots  
+- Deterministic diffs  
+- Fully offline  
 - Open source  
 
 ---
@@ -46,10 +39,9 @@ It is used for:
 - Evidence signing  
 - Evidence manifest generation  
 - Exportable audit bundles  
-- Historical snapshot tracking  
+- Historical tracking  
 - Multi-system comparison  
 - Offline verification  
-- License-based deployment  
 
 Founding Member:
 - $200 / year (first 100 users, normally $250/year)
@@ -67,6 +59,8 @@ Founding Member:
 ---
 
 # Example Output (Windows)
+
+## Clean System
 
 ```text
 C:\> auditmate.exe
@@ -89,38 +83,3 @@ Errors   : false
 Reset    : false
 Report   : auditmate-output\audit.json
 Duration : 52ms
-
-
-C:\> auditmate.exe
-
-AuditMate
------------------------------------
-Hostname : WORKSTATION-01
-OS       : Windows 11 Pro
-Uptime   : 1 day, 3 hours
-
-Users    : 4
-Services : 130
-Packages : 96
-Ports    : 8
-
-Status   : Drift detected
-
-Changes:
- + Users:
-   + hacker (admin)
-
- + Services:
-   + sshd
-   + remote-control
-
- + Open ports:
-   + 22/tcp
-   + 3389/tcp
-
------------------------------------
-Warnings : 1
-Errors   : false
-Reset    : false
-Report   : auditmate-output\audit.json
-Duration : 61ms
