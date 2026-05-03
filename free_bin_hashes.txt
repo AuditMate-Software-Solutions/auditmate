@@ -1,0 +1,2 @@
+28f6b1abe9efeaf1dc7f71ca8040f6d8900cbf91de9cf171073ecd53f2fb2699  /home/ubuntu/auditmate/bin/auditmate
+6d5913fff3a99a2373c88d3cfb59563effa868bf99ea472c10cdce04837636a6  /home/ubuntu/auditmate/bin/auditmate.exe
